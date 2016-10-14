@@ -1,0 +1,51 @@
+var wordletter = ['N', 'E', 'A', 'T'];
+var guessedletter = ['_', '_', '_', '_'];
+
+function guessletter(letter) {
+
+    var right = false; 
+	var keepguessing = false;
+	
+	for (var i = 0; i < 
+	
+wordletter.length; i++) {
+	
+	if (wordletter[i] == letter) {
+		
+		guessedletter[i] = letter;
+		
+		right = true;
+		
+	}
+	
+	if (guessedletter[i] == '_') {
+		
+		keepguessing = true;
+		
+	}
+	
+}
+
+if (right) {
+	
+	console.log('Congratulations your a little closer!');
+	
+console.log(guessedletter.join(''));
+
+    if (!keepguessing) {
+    	
+    	console.log('You BEAT ME!');
+    	
+    }
+    
+  } else {
+  	
+  	console.log ('Your Wrong');
+  	
+  }
+  }
+  guessletter('N');
+  guessletter('E');
+  guessletter('D');
+  guessletter('A');
+  guessletter('T');
